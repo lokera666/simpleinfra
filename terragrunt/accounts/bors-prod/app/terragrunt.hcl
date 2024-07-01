@@ -8,7 +8,7 @@ include {
 }
 
 inputs = {
-  domain = "bors-staging.rust-lang.net"
-  gh_app_id = "343095"
-  trusted_sub = "repo:rust-lang/bors:environment:staging"
+  domain = "bors-prod.rust-lang.net"
+  gh_app_id = "278306"
+  trusted_sub = "repo:rust-lang/bors:environment:production"
 }
