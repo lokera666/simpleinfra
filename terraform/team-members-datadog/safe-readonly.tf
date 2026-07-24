@@ -1,6 +1,11 @@
 # Opt out of all default permissions and grant
 # only the observability access needed to debug incidents and troubleshoot issues.
 # This role can be used by AI agents to access DataDog.
+#
+# Risk: if PII or secrets leak into logs, this role can read them.
+# If you use an AI agent, consider writing in the prompt something like:
+# "if you find PII or secrets in logs, stop your task and report it to me,
+# so that I audit them and I decide whether to remove them".
 resource "datadog_role" "safe_readonly" {
   name = "safe-readonly"
 
